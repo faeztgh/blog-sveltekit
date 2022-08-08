@@ -1,7 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
-
-
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,16 +18,10 @@ const config = {
 			default: true
 		},
 		adapter: adapter({
-			// default options are shown
-			pages: 'build',
-			assets: 'build',
+			pages: 'build', // path to public directory
+			assets: 'build', // path to public directory
 			fallback: null
-		}),
-		paths: {
-			// change below to your repo name
-			base: '/blog-sveltekit'
-		}
-		// hydrate the <div id="svelte"> element in src/app.html
+		})
 	}
 };
 
