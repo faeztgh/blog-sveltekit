@@ -1,15 +1,16 @@
 <script lang="ts">
 		import { blur } from 'svelte/transition';
+		import { base } from '$app/paths';
 
 	export let isfferBoxOpen = true;
 </script>
 
 <aside class="w-64 relative " aria-label="Sidebar">
-	<div class="overflow-y-auto py-4 px-3 top-36 sticky bg-gray-50 rounded dark:bg-gray-800">
+	<div class="overflow-y-auto py-4 px-3 top-36 sticky bg-gray-50 rounded dark:bg-gray-800 shadow-md">
 		<ul class="space-y-2">
 			<li>
 				<a
-					href="/"
+					href="{base}/"
 					class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 				>
 					<svg
@@ -49,7 +50,7 @@
 			</li>
 			<li>
 				<a
-					href="/login"
+					href="{base}/login"
 					class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
 				>
 					<svg
