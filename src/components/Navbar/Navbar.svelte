@@ -49,7 +49,7 @@
 <nav
 	class="w-full sticky  top-0 z-30 bg-secondary text-primary px-20 py-3 h-16 dark:bg-primary dark:text-secondary flex justify-between align-middle"
 >
-	<a href="/">
+	<a href="{base}/">
 		<img class="h-16 w-16 drop-shadow-lg absolute left-5" src={logo} alt="logo" />
 	</a>
 	<ul
