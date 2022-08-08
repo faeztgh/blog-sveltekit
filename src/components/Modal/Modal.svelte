@@ -1,5 +1,5 @@
 <script>
-	import { fade } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 	export let author;
 	export let isModalOpen;
 
@@ -12,7 +12,7 @@
 
 <!-- Backdrop -->
 
-<div transition:fade class="fixed inset-0 bg-slate-900 bg-opacity-50 top-0 z-50 w-full h-full" />
+<div transition:blur class="fixed inset-0 bg-slate-900 bg-opacity-50 top-0 z-50 w-full h-full" />
 <!-- Main modal -->
 <div
 	id="defaultModal"
@@ -20,7 +20,7 @@
 	class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
 	aria-modal="true"
 	role="dialog"
-	transition:fade
+	transition:blur
 >
 	<div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
 		<!-- Modal content -->

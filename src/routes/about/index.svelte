@@ -1,17 +1,25 @@
+<script>
+	import { slide } from 'svelte/transition';
+
+</script>
+
 <svelte:head>
 	<title>About</title>
 </svelte:head>
 <!-- component -->
-<div class="flex flex-col h-screen bg-center bg-cover bg-no-repeat bg-transparent ">
+<div 
+transition:slide
+class="flex flex-col h-screen bg-center bg-cover bg-no-repeat bg-transparent dark:bg-gradient-to-br dark:from-primary dark:to-sky-700 rounded-md dark:shadow-md ">
 	<div
-		class="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-white-600 border-4 border-indigo-600 bg-opacity-70 rounded-xl shadow-2xl space-y-5 text-center cursor-pointer"
+		class="grid place-items-center w-4/5 mx-auto p-10 my-20 sm:my-auto bg-white-600 border-4 
+		 border-indigo-600 dark:border-gray-200 bg-opacity-70 rounded-xl shadow-2xl space-y-5 text-center cursor-pointer"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"
 			height="16"
 			fill="currentColor"
-			class="h-24 w-24 text-indigo-600"
+			class="h-24 w-24 text-indigo-600 dark:text-gray-200"
 			viewBox="0 0 16 16"
 		>
 			<path
@@ -20,15 +28,15 @@
 			<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0z" />
 		</svg>
 
-		<h1 class="text-4xl font-bold uppercase text-indigo-600 transition duration-500">About Us</h1>
-		<h2 class="text-xl text-gray-700 transition duration-500">
+		<h1 class="text-4xl font-bold uppercase text-indigo-600 dark:text-gray-200 transition duration-500">About Us</h1>
+		<h2 class="text-xl text-gray-700 dark:text-gray-100 transition duration-500">
 			Best blog you have read that wrote by svelte! 
             <a
 				class="hover:underline"
 				href="https://www.emojimania.org"
 			> </a>
 		</h2>
-		<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 dark:text-gray-200">
 			<a
 				href="https://www.facebook.com/QuickToolz"
 				title="Quicktoolz On Facebook"

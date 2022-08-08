@@ -8,6 +8,7 @@
 	import FaSolidGlobe from 'svelte-icons-pack/fa/FaSolidGlobe';
 	import Card from '../../components/Card/Card.svelte';
 	import Modal from '../../components/Modal/Modal.svelte';
+	import { blur } from 'svelte/transition';
 
 	const slug = $page.params.slug;
 	const blog = data.find((item) => item.slug === slug);
@@ -23,7 +24,7 @@
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
-<div>
+<div transition:blur>
 	{#if isModalOpen}
 		<Modal {author} bind:isModalOpen />
 	{/if}
@@ -41,8 +42,8 @@
 			</div>
 		</div>
 		<div class="flex items-center justify-between">
-			<a class="text-2xl mx-1 text-primary" href={author.facebook}>
-				<Icon color="#3C4390" src={FaBrandsFacebookSquare} />
+			<a class="text-2xl mx-1 text-primary dark:text-white" href={author.facebook}>
+				<Icon color="inhert" src={FaBrandsFacebookSquare} />
 			</a>
 			<a class="text-2xl mx-1 text-blue-400" href={author.twitter}>
 				<Icon color="#1DA1F2" src={FaBrandsTwitterSquare} />

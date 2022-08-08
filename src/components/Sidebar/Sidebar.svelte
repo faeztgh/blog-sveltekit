@@ -1,4 +1,6 @@
 <script lang="ts">
+		import { blur } from 'svelte/transition';
+
 	export let isfferBoxOpen = true;
 </script>
 
@@ -87,7 +89,9 @@
 			</li> -->
 		</ul>
 		{#if isfferBoxOpen}
-			<div id="dropdown-cta" class="p-4 mt-6 bg-blue-50 rounded-lg dark:bg-blue-900" role="alert">
+			<div 
+			transition:blur
+			id="dropdown-cta" class="p-4 mt-6 bg-blue-50 rounded-lg dark:bg-blue-900" role="alert">
 				<div class="flex items-center mb-3">
 					<span
 						class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-orange-200 dark:text-orange-900"
@@ -115,7 +119,7 @@
 						>
 					</button>
 				</div>
-				<p class="mb-3 text-sm text-blue-900 dark:text-blue-400">Specal offer for new members!</p>
+				<p class="mb-3 text-sm text-blue-900 dark:text-blue-400">Special offer for new members!</p>
 				<a
 					class="text-sm text-blue-900 underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 					href="#">Subscribe Now</a

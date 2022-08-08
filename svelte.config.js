@@ -20,8 +20,11 @@ const config = {
 		adapter: adapter({
 			pages: 'build', // path to public directory
 			assets: 'build', // path to public directory
-			fallback: null
-		})
+			fallback: 'index.html' // path to index.html
+		}),
+		paths: {
+			assets: 'https://faeztgh.github.io/blog-sveltekit',
+		}
 	}
 };
 

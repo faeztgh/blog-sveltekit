@@ -1,4 +1,6 @@
 <script lang="ts" context="module">
+	import { base } from '$app/paths';
+
 	let searchInput: any = '';
 	const search = (e: any) => {
 		if (e.key !== 'Enter') return;
@@ -18,7 +20,7 @@
 </script>
 
 <script lang="ts">
-	import { scale } from 'svelte/transition';
+	import { scale, fade } from 'svelte/transition';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import logo from '../../assets/logo.svg';
@@ -45,7 +47,7 @@
 </script>
 
 <nav
-	class="w-full sticky  top-0 z-10 bg-secondary text-primary px-20 py-3 h-16 dark:bg-primary dark:text-secondary flex justify-between align-middle"
+	class="w-full sticky  top-0 z-30 bg-secondary text-primary px-20 py-3 h-16 dark:bg-primary dark:text-secondary flex justify-between align-middle"
 >
 	<a href="/">
 		<img class="h-16 w-16 drop-shadow-lg absolute left-5" src={logo} alt="logo" />
@@ -54,7 +56,7 @@
 		class="flex justify-between pt-1 w-full max-w-lg text-2xl font-bold text-black dark:text-white"
 	>
 		<li class="flex flex-col relative">
-			<a href="/">Home</a>
+			<a href="{base}/">Home</a>
 			{#if $page.url.pathname == '/' && ready}
 				<span
 					transition:scale
@@ -63,7 +65,7 @@
 			{/if}
 		</li>
 		<li class="flex flex-col relative">
-			<a href="/about">About</a>
+			<a href="{base}/about">About</a>
 			{#if $page.url.pathname == '/about' && ready}
 				<span
 					transition:scale
@@ -72,7 +74,7 @@
 			{/if}
 		</li>
 		<li class="flex flex-col relative">
-			<a href="/contact">Contact</a>
+			<a href="{base}/contact">Contact</a>
 			{#if $page.url.pathname == '/contact' && ready}
 				<span
 					transition:scale
@@ -99,7 +101,7 @@
 			</button>
 			<input
 				type="search"
-				class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-red-200 dark:bg-sky-200git init text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out"
+				class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-red-200 dark:bg-sky-200 init text-gray-500 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out"
 				placeholder="Search"
 				on:keydown={(e) => search(e)}
 				on:input={(item) => (searchInput = item?.target?.value)}
@@ -108,13 +110,17 @@
 	</div>
 	<div class="mx-2">
 		<button
-			class="rounded-lg bg-gray-300 border shadow w-9 h-9 flex items-center justify-center"
+			class="rounded-lg bg-gray-200 hover:shadow-lg border shadow w-9 h-9 flex items-center justify-center"
 			on:click={handleDarkMode}
 		>
 			{#if isDark}
-				<Icon color="#FFF" size="20px" src={FaSolidSun} />
+				<span in:fade={{ duration: 150 }} out:fade={{ duration: 300 }}>
+					<Icon color="#FFFF8A" size="20px" src={FaSolidSun} />
+				</span>
 			{:else}
-				<Icon color="#FFF" size="20px" src={FaSolidMoon} />
+				<span in:fade={{ duration: 150 }} out:fade={{ duration: 300 }}>
+					<Icon color="#FFF" size="20px" src={FaSolidMoon} />
+				</span>
 			{/if}
 		</button>
 	</div>
