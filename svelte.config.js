@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
-const dev = 'production' === 'development';
+
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,15 +18,16 @@ const config = {
 			default: true
 		},
 		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs'
+			// default options are shown
+			pages: 'build',
+			assets: 'build',
+			fallback: null
 		}),
 		paths: {
 			// change below to your repo name
-			base: dev ? '' : '/blog-sveltekit'
-		},
+			base: '/blog-sveltekit'
+		}
 		// hydrate the <div id="svelte"> element in src/app.html
-		
 	}
 };
 
