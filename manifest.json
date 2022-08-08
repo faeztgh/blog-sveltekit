@@ -4,7 +4,7 @@
     "src": "src/assets/logo.svg"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-1e475de9.js",
+    "file": "_app/immutable/start-fcd1da8e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
