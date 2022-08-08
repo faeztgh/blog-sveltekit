@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
@@ -27,7 +24,9 @@ const config = {
 		paths: {
 			// change below to your repo name
 			base: dev ? '' : '/blog-sveltekit'
-		}
+		},
+		// hydrate the <div id="svelte"> element in src/app.html
+		
 	}
 };
 
