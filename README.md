@@ -37,4 +37,4 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-### Must add base URL n ndex.html n build folder t work on GH-Pages
+### Must add base URL in index.html into the build folder to work on GH-Pages
