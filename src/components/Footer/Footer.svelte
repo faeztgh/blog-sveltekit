@@ -4,6 +4,7 @@
 	import FaBrandsTwitterSquare from 'svelte-icons-pack/fa/FaBrandsTwitterSquare';
 	import FaBrandsGoogle from 'svelte-icons-pack/fa/FaBrandsGoogle';
 	import FaSolidGlobe from 'svelte-icons-pack/fa/FaSolidGlobe';
+	import { base } from '$app/paths';
 
 	const currYear = new Date().getFullYear();
 </script>
@@ -12,9 +13,9 @@
 	class="w-full relative h-44 bg-blue-900 dark:bg-primary px-20 flex justify-between items-center "
 >
 	<ul class="w-3/6 flex px-48 font-serif  font-semibold flex-wrap text-secondary justify-around">
-		<li><a class="hover:underline" href="/">Home</a></li>
-		<li><a class="hover:underline" href="/about">About</a></li>
-		<li><a class="hover:underline" href="/contact">Contact</a></li>
+		<li><a class="hover:underline" href="{base}/">Home</a></li>
+		<li><a class="hover:underline" href="{base}/about">About</a></li>
+		<li><a class="hover:underline" href="{base}/contact">Contact</a></li>
 	</ul>
 	<div class="flex w-1/6 items-center justify-between">
 		<a class="text-2xl mx-1 text-primary" href="">

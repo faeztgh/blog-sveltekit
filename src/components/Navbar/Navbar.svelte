@@ -15,7 +15,7 @@
 			}
 		});
 		if (articleObj?.slug == undefined) return;
-		routeToPage(`/blog/${articleObj?.slug}`);
+		routeToPage(`${base}/blog/${articleObj?.slug}`);
 	};
 </script>
 

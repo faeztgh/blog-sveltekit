@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	export /**
 	 * @type {{ image: string | null | undefined; }}
@@ -12,7 +13,7 @@
 	<a
 		sveltekit:prefetch
 		sveltekit:reload
-		href="/blog/{slug}"
+		href="{base}/blog/{slug}"
 		class="flex flex-col w-3/4 mx-5 h-32 my-5 max-w-sm items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
 	>
 		<img
